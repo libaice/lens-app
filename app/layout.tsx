@@ -5,7 +5,6 @@ import { mainnet, polygon } from 'wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public'
 import { LensProvider, LensConfig, production } from '@lens-protocol/react-web'
 import { bindings as wagmiBindings } from '@lens-protocol/wagmi'
-import { test } from 'node:test'
 const { provider, webSocketProvider } = configureChains([polygon, mainnet], [publicProvider()])
 
 const client = createClient({
@@ -24,8 +23,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
-  
   return (
     <html lang="en">
       <WagmiConfig client={client}>
